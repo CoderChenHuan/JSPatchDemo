@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EDb-Ig-BgF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3br-yn-5pg">
+            <objects>
+                <navigationController id="EDb-Ig-BgF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="49H-Ne-a0J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eDz-VG-fn0" kind="relationship" relationship="rootViewController" id="VjL-8r-ug5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hD-j9-Dkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PAs-MH-LqQ">
+            <objects>
+                <viewController id="eDz-VG-fn0" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VUb-en-pJ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="WcU-94-YLj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HmM-yP-o4V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljc-FG-X8n">
+                                <rect key="frame" x="274" y="84" width="52" height="30"/>
+                                <state key="normal" title="Button1"/>
+                                <connections>
+                                    <segue destination="qzq-jh-k2h" kind="push" id="Oq0-8o-DXK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ljc-FG-X8n" firstAttribute="top" secondItem="VUb-en-pJ4" secondAttribute="bottom" constant="20" id="pJN-pT-WP5"/>
+                            <constraint firstItem="ljc-FG-X8n" firstAttribute="centerX" secondItem="HmM-yP-o4V" secondAttribute="centerX" id="zNF-bd-FdL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hwf-hv-NNz">
+                        <barButtonItem key="rightBarButtonItem" title="加载" id="Vbo-R6-QMf">
+                            <connections>
+                                <action selector="loadScript:" destination="eDz-VG-fn0" id="WZ1-OE-jOS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTR-r4-ps1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="295"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="pg7-CS-iA5">
+            <objects>
+                <viewController id="qzq-jh-k2h" customClass="ViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xGa-Zz-wga"/>
+                        <viewControllerLayoutGuide type="bottom" id="v9V-TI-5cP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mn9-4b-jSI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34g-Kx-5z6">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="34g-Kx-5z6" firstAttribute="centerY" secondItem="Mn9-4b-jSI" secondAttribute="centerY" id="Hgg-jd-qOL"/>
+                            <constraint firstItem="34g-Kx-5z6" firstAttribute="centerX" secondItem="Mn9-4b-jSI" secondAttribute="centerX" id="wpD-lF-5NB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VCF-Ju-g8B"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="34g-Kx-5z6" id="dKR-Yz-1E1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zu-Zr-t8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="277"/>
+        </scene>
+    </scenes>
+</document>
